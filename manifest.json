@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "FB Scraping",
+  "version": "1.3.1",
+  "icons": {
+    "16": "/assets/imgs/icon16.png",
+    "48": "/assets/imgs/icon48.png"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "tabs",
+    "storage"
+  ]
+}
