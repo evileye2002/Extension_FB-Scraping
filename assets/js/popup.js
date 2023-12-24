@@ -1,26 +1,6 @@
-// Fields
-let stored_data;
-let info;
-let web_name;
-let new_item;
-let point_selection = document.getElementById("point-selection");
-let btn_add = document.getElementById("btn-add");
-let btn_delete = document.getElementById("btn-delete");
-let btn_delete_all = document.getElementById("btn-delete-all");
-
 // Events
 document.addEventListener("DOMContentLoaded", () => {
   getTabID();
-});
-
-chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {});
-
-btn_add.addEventListener("click", () => {
-  getWeb(addNewData);
-});
-
-btn_delete.addEventListener("click", () => {
-  getWeb(deleteItem);
 });
 
 // Functions
@@ -48,21 +28,6 @@ function getTabID() {
       });
     }
   );
-}
-
-function toCsv(posts) {
-  let csvContent = "creator,text,like,cmt,share\n";
-  posts.forEach((post) => {
-    let row = `${post.creator},${post.text},${post.like},${post.cmt},${post.share}\n`;
-    csvContent += row;
-  });
-  let data = new Blob([csvContent], { type: "text/csv" });
-  let downloadLink = document.createElement("a");
-  downloadLink.href = URL.createObjectURL(data);
-  downloadLink.download = "motivation.csv";
-  downloadLink.click();
-  URL.revokeObjectURL(downloadLink.href);
-  downloadLink.remove();
 }
 
 function scraping() {
