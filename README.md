@@ -1,2 +1,4 @@
-# Extension_FB-Scraping
+# About
+
+A simple extension to scrape posts or reels on FB
  
