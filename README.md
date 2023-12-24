@@ -1,4 +1,4 @@
 # About
 
-A simple extension to scrape posts or reels on FB
+A simple Chrome extension to scrape posts or reels on FB
  
